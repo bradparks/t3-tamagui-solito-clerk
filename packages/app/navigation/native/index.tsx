@@ -6,6 +6,7 @@ import { UserDetailScreen } from "../../features/user/detail-screen";
 import { SignInScreen } from "../../features/signin/screen";
 import { SignUpScreen } from "../../features/signup/screen";
 import { EmailVerificationScreen } from "../../features/signup/email-verification/screen";
+import { HelloWorldScreenScreen } from "../../features/helloworldscreen/screen";
 import { SSOOAuthScreen } from "../../features/signup/sso-oauth/screen";
 
 const Stack = createNativeStackNavigator<{
@@ -17,6 +18,7 @@ const Stack = createNativeStackNavigator<{
   signup: undefined;
   "email-verification": undefined;
   "sso-oauth": { strategy: "google" | "discord" | "apple" | "complete" };
+  helloworldscreen: undefined;
 }>();
 
 export function NativeNavigation() {
@@ -65,6 +67,13 @@ export function NativeNavigation() {
           title: "SSO OAuth",
         }}
       />
-    </Stack.Navigator>
+      <Stack.Screen
+        name="helloworldscreen"
+        component={HelloWorldScreenScreen}
+        options={{
+          title: "HelloWorldScreen",
+        }}
+      />
+</Stack.Navigator>
   );
 }

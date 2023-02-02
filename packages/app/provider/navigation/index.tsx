@@ -21,7 +21,8 @@ export function NavigationProvider({
               signup: "signup",
               "email-verification": "signup/email-verification",
               "sso-oauth": "signup/sso-oauth/:strategy",
-            },
+              helloworldscreen: "helloworldscreen",
+},
           },
         }),
         []

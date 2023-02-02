@@ -8,6 +8,11 @@
 !.yarn/versions
 .env
 
+
+# clerk auth file for expo
+packages/app/provider/auth/index.tsx
+/packages/app/provider/auth/index.tsx
+
 # expo
 **/.expo/*
 
